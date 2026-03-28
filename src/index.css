@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #fff5f7 0%, #f0f4ff 50%, #fff9f0 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fce7f3;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f9a8d4;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ec4899;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-pink-400 hover:bg-pink-500 text-white font-semibold rounded-2xl shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-300 active:scale-95;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-2xl shadow border border-gray-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-200 active:scale-95;
+  }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-red-400 hover:bg-red-500 text-white font-semibold rounded-2xl shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-300 active:scale-95;
+  }
+  .card {
+    @apply bg-white rounded-3xl shadow-card p-5 transition-all duration-200;
+  }
+  .input {
+    @apply w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition-all duration-200 bg-white text-gray-800 placeholder-gray-400;
+  }
+  .textarea {
+    @apply w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition-all duration-200 bg-white text-gray-800 placeholder-gray-400 resize-none;
+  }
+  .label {
+    @apply block text-sm font-semibold text-gray-600 mb-1.5;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in  { animation: fadeIn  0.25s ease forwards; }
+.animate-scale-in { animation: scaleIn 0.2s  ease forwards; }

@@ -1,0 +1,61 @@
+export const CATEGORIES = [
+  {
+    key: 'birthdays',
+    label: 'Birthdays',
+    emoji: '🎂',
+    color: 'pink',
+    bgClass: 'bg-baby-pink',
+    textClass: 'text-pink-600',
+    borderClass: 'border-baby-pink-dark',
+    activeClass: 'bg-pink-400 text-white',
+    description: 'Birthday celebrations & parties',
+  },
+  {
+    key: 'milestones',
+    label: 'Milestones',
+    emoji: '⭐',
+    color: 'purple',
+    bgClass: 'bg-baby-purple',
+    textClass: 'text-purple-600',
+    borderClass: 'border-baby-purple-dark',
+    activeClass: 'bg-purple-400 text-white',
+    description: 'First steps, words & big moments',
+  },
+  {
+    key: 'funnyHabits',
+    label: 'Funny Habits',
+    emoji: '😄',
+    color: 'yellow',
+    bgClass: 'bg-baby-yellow',
+    textClass: 'text-yellow-600',
+    borderClass: 'border-baby-yellow-dark',
+    activeClass: 'bg-yellow-400 text-white',
+    description: 'Quirky, funny & adorable moments',
+  },
+  {
+    key: 'memories',
+    label: 'Memories',
+    emoji: '💭',
+    color: 'blue',
+    bgClass: 'bg-baby-blue',
+    textClass: 'text-blue-600',
+    borderClass: 'border-baby-blue-dark',
+    activeClass: 'bg-blue-400 text-white',
+    description: 'Special days & cherished moments',
+  },
+  {
+    key: 'achievements',
+    label: 'Achievements',
+    emoji: '🏆',
+    color: 'green',
+    bgClass: 'bg-baby-green',
+    textClass: 'text-green-600',
+    borderClass: 'border-baby-green-dark',
+    activeClass: 'bg-green-400 text-white',
+    description: 'Awards, firsts & proud moments',
+  },
+]
+
+export function getCategory(key) {
+  return CATEGORIES.find(c => c.key === key)
+}
