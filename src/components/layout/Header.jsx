@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useBabyBookContext } from '../../store/BabyBookContext'
 import StorageMeter from '../ui/StorageMeter'
+import ExportButton from '../export/ExportButton'
 import { getCurrentAgeKey, getAgeGroup } from '../../constants/ageGroups'
 
 export default function Header() {
@@ -35,7 +36,10 @@ export default function Header() {
         </div>
 
         {/* Right side */}
-        <StorageMeter />
+        <div className="flex items-center gap-3">
+          <StorageMeter />
+          <ExportButton />
+        </div>
       </div>
     </header>
   )
